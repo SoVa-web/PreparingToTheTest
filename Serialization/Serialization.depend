@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1591713313 source:c:\users\suprun\desktop\Підготовка до екзу\preparingtothetest\serialization\main.cpp
+1591725334 source:c:\users\suprun\desktop\Підготовка до екзу\preparingtothetest\serialization\main.cpp
 	<iostream>
 	<string>
+	<fstream>
 

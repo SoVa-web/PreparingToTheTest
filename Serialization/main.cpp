@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -32,7 +33,28 @@ class Dopka{
 
 int main()
 {
-    Dopka dopka(60,70,80,90,100);
+   /* Dopka dopka(60,70,80,90,100);
     dopka.Eshechka();
-    return 0;
+    //writing object in file.txt
+    ofstream out;
+    out.open("Dopka.txt", ofstream::app);
+    if(out.is_open()){
+      cout<<" Eshechka "<<endl;
+	  out.write((char*)&dopka, sizeof(Dopka));
+    }else{
+     cout<<" File wasn`t open! "<<endl;
+    }
+    out.close();*/
+    //reading object of class from file.txt
+    Dopka glusty;
+    ifstream in;
+    in.open("Dopka.txt");
+    if(in.is_open()){
+      cout<<" Eshechka "<<endl;
+	  in.read((char*)&glusty, sizeof(Dopka));
+    }else{
+     cout<<" File wasn`t open! "<<endl;
+    }
+    in.close();
+        return 0;
 }
